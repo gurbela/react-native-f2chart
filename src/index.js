@@ -1,5 +1,7 @@
 import React, { PureComponent, createRef } from "react";
-import { WebView as RNWebView, StyleSheet, Platform } from "react-native";
+import { StyleSheet, Platform } from "react-native";
+import {WebView} from 'react-native-webview';
+
 
 const changeData = data => `chart.changeData(${JSON.stringify(data)});`;
 
@@ -20,7 +22,7 @@ export default class Chart extends PureComponent<Props> {
     onChange: () => {},
     initScript: "",
     data: [],
-    webView: RNWebView
+    webView: WebView
   };
 
   constructor(props) {
